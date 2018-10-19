@@ -27,20 +27,32 @@ $(document).ready(function () {
             $(h3).append(' ' + j)
         }
 
+
+        function alert(number) {
+            return function () {
+                var f = number % friends.length;
+                console.log(f);
+                var l = number % location.length;
+                console.log(l);
+                var w = number % weapons.length;
+                console.log(w);
+                alert('I accuse ' + f[friends] + ' with the ' + w[weapons] + ' in the ' + l[location] + '!');
+            }
+        }
+
         $(h3).click(function () {
             console.log('true');
 
-
-
-
-
-
-
+            alert(j);
 
         });
+
+
+
     })
 
-})
+
+});
 
 
 
